@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>FyndrWealth — Find Your Financial Freedom</title>
+<meta name="description" content="Free personal finance app. Budget, track debt, set goals, and get AI-powered advice — no subscription, no bank login required."/>
+<link rel="icon" type="image/png" href="data:image/png;base64,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"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#050d1a;
+  --surface:#0a1628;
+  --card:#0f1f38;
+  --border:#1a3050;
+  --accent:#2563eb;
+  --accent2:#0ea5e9;
+  --green:#10b981;
+  --text:#e8f0fe;
+  --muted:#6b8aad;
+  --gold:#f59e0b;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;line-height:1.6;overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,13,26,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(26,48,80,0.5);}
+.nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.nav-logo img{height:28px;width:28px;object-fit:contain;border-radius:5px;}
+.nav-logo span{font-size:1.1rem;font-weight:800;background:linear-gradient(135deg,#1d4ed8,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;font-weight:600;transition:color 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-cta{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:20px;padding:8px 20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;font-weight:700;cursor:pointer;text-decoration:none;transition:opacity 0.2s;}
+.nav-cta:hover{opacity:0.85;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden;}
+.hero-glow{position:absolute;top:20%;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(37,99,235,0.15) 0%,transparent 70%);pointer-events:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.3);border-radius:20px;padding:6px 14px;font-size:0.72rem;font-weight:700;color:var(--accent2);margin-bottom:24px;}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.1;letter-spacing:-2px;margin-bottom:20px;max-width:760px;}
+.hero h1 span{background:linear-gradient(135deg,#2563eb,#0ea5e9,#10b981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero-sub{font-size:1.05rem;color:var(--muted);max-width:520px;margin:0 auto 36px;line-height:1.7;}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:12px;padding:14px 28px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;text-decoration:none;transition:all 0.2s;box-shadow:0 4px 20px rgba(37,99,235,0.35);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(37,99,235,0.5);}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:14px 28px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;text-decoration:none;transition:all 0.2s;}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.04);}
+.hero-note{font-size:0.72rem;color:var(--muted);}
+.hero-note span{color:var(--green);font-weight:700;}
+
+/* APP PREVIEW */
+.preview-wrap{margin-top:56px;position:relative;max-width:900px;width:100%;}
+.preview-frame{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,0.5);}
+.preview-bar{background:var(--surface);padding:10px 16px;display:flex;align-items:center;gap:6px;border-bottom:1px solid var(--border);}
+.preview-dot{width:10px;height:10px;border-radius:50%;}
+.preview-screen{padding:20px;}
+.mock-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.mock-logo{font-weight:800;font-size:0.9rem;background:linear-gradient(135deg,#1d4ed8,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.mock-score-ring{display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(16,185,129,0.08));border:1px solid rgba(37,99,235,0.2);border-radius:14px;padding:16px;margin-bottom:12px;}
+.mock-score-num{font-family:'Fira Code',monospace;font-size:2.2rem;font-weight:700;background:linear-gradient(135deg,#7c6dfa,#4cc9f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.mock-score-label{font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:2px;}
+.mock-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px;}
+.mock-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px;}
+.mock-card-label{font-size:0.55rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
+.mock-card-val{font-family:'Fira Code',monospace;font-weight:700;font-size:0.9rem;}
+.mock-bar-row{margin-bottom:8px;}
+.mock-bar-label{display:flex;justify-content:space-between;font-size:0.6rem;color:var(--muted);margin-bottom:4px;}
+.mock-bar{height:6px;background:var(--border);border-radius:4px;overflow:hidden;}
+.mock-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
+
+/* STATS */
+.stats{padding:60px 24px;display:flex;justify-content:center;gap:48px;flex-wrap:wrap;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);}
+.stat{text-align:center;}
+.stat-val{font-family:'Fira Code',monospace;font-size:2rem;font-weight:700;background:linear-gradient(135deg,#2563eb,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.stat-label{font-size:0.72rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:1px;}
+
+/* FEATURES */
+.section{padding:80px 24px;max-width:1100px;margin:0 auto;}
+.section-badge{display:inline-block;background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.25);border-radius:20px;padding:4px 14px;font-size:0.68rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;}
+.section-title{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;letter-spacing:-1px;margin-bottom:12px;}
+.section-sub{font-size:0.92rem;color:var(--muted);max-width:500px;margin-bottom:48px;line-height:1.7;}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+.feat-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;transition:border-color 0.2s,transform 0.2s;}
+.feat-card:hover{border-color:rgba(37,99,235,0.35);transform:translateY(-3px);}
+.feat-icon{font-size:1.8rem;margin-bottom:12px;}
+.feat-title{font-size:0.95rem;font-weight:700;margin-bottom:6px;}
+.feat-desc{font-size:0.78rem;color:var(--muted);line-height:1.6;}
+
+/* HOW IT WORKS */
+.steps{display:flex;flex-direction:column;gap:0;max-width:680px;}
+.step{display:flex;gap:20px;padding:28px 0;border-bottom:1px solid var(--border);}
+.step:last-child{border-bottom:none;}
+.step-num{width:36px;height:36px;border-radius:50%;background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.3);display:flex;align-items:center;justify-content:center;font-family:'Fira Code',monospace;font-weight:700;font-size:0.85rem;color:var(--accent);flex-shrink:0;margin-top:2px;}
+.step-title{font-size:1rem;font-weight:700;margin-bottom:6px;}
+.step-desc{font-size:0.82rem;color:var(--muted);line-height:1.65;}
+
+/* COMPARISON */
+.compare-table{width:100%;border-collapse:collapse;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+.compare-table th{background:var(--card);padding:14px 18px;text-align:left;font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.compare-table th:first-child{color:var(--text);}
+.compare-table td{padding:14px 18px;font-size:0.82rem;border-top:1px solid var(--border);}
+.compare-table tr:hover td{background:rgba(255,255,255,0.02);}
+.compare-table .feature-col{color:var(--text);font-weight:600;}
+.compare-table .yes{color:var(--green);font-weight:700;}
+.compare-table .no{color:#ef4444;}
+.compare-table .highlight-col{color:var(--accent2);font-weight:700;}
+.compare-table .col-head-fw{background:rgba(37,99,235,0.12);color:var(--accent2);}
+
+/* TESTIMONIALS */
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+.testi-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;}
+.testi-text{font-size:0.85rem;line-height:1.7;margin-bottom:16px;color:var(--text);}
+.testi-author{display:flex;align-items:center;gap:10px;}
+.testi-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;}
+.testi-name{font-size:0.78rem;font-weight:700;}
+.testi-handle{font-size:0.65rem;color:var(--muted);}
+.stars{color:var(--gold);font-size:0.75rem;margin-bottom:10px;}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:900px;}
+.price-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px;position:relative;}
+.price-card.featured{border-color:rgba(37,99,235,0.5);background:linear-gradient(135deg,rgba(37,99,235,0.08),rgba(14,165,233,0.05));}
+.price-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-radius:20px;padding:4px 14px;font-size:0.65rem;font-weight:700;white-space:nowrap;}
+.price-name{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:8px;}
+.price-val{font-family:'Fira Code',monospace;font-size:2.4rem;font-weight:700;margin-bottom:4px;}
+.price-val span{font-size:0.9rem;color:var(--muted);font-weight:400;}
+.price-desc{font-size:0.75rem;color:var(--muted);margin-bottom:20px;}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:24px;}
+.price-features li{font-size:0.78rem;display:flex;align-items:center;gap:8px;}
+.price-features li::before{content:"✓";color:var(--green);font-weight:700;flex-shrink:0;}
+.price-features li.no::before{content:"—";color:var(--border);}
+.price-features li.no{color:var(--muted);}
+
+/* FAQ */
+.faq{max-width:680px;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{padding:18px 0;font-size:0.92rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;}
+.faq-q::after{content:"+";font-size:1.2rem;color:var(--muted);transition:transform 0.2s;}
+.faq-item.open .faq-q::after{transform:rotate(45deg);color:var(--accent);}
+.faq-a{font-size:0.82rem;color:var(--muted);line-height:1.7;padding-bottom:18px;display:none;}
+.faq-item.open .faq-a{display:block;}
+
+/* CTA BOTTOM */
+.cta-bottom{text-align:center;padding:100px 24px;background:linear-gradient(180deg,transparent,rgba(37,99,235,0.06));border-top:1px solid var(--border);}
+.cta-bottom h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-1.5px;margin-bottom:16px;}
+.cta-bottom p{color:var(--muted);margin-bottom:32px;font-size:0.95rem;}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:40px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;gap:16px;}
+.footer-logo{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.footer-logo span{font-weight:800;font-size:0.95rem;background:linear-gradient(135deg,#1d4ed8,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:0.75rem;font-weight:600;transition:color 0.2s;}
+.footer-links a:hover{color:var(--text);}
+.footer-copy{font-size:0.7rem;color:var(--muted);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.fade-up{animation:fadeUp 0.6s ease both;}
+.delay-1{animation-delay:0.1s;}
+.delay-2{animation-delay:0.2s;}
+.delay-3{animation-delay:0.3s;}
+.delay-4{animation-delay:0.4s;}
+
+@media(max-width:600px){
+  .nav-links{display:none;}
+  .stats{gap:28px;}
+  footer{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <img src="data:image/png;base64,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" alt="FyndrWealth"/>
+    <span>FyndrWealth</span>
+  </a>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a class="nav-cta" href="app.html">Get Started Free</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-badge fade-up">💎 Free · No credit card · No bank login</div>
+  <h1 class="fade-up delay-1">Your Money.<br/><span>Finally Under Control.</span></h1>
+  <p class="hero-sub fade-up delay-2">FyndrWealth gives you a financial health score, AI-powered advice, debt crusher, budget tracker, and savings goals — all free, forever. No subscription. No ads.</p>
+  <div class="hero-actions fade-up delay-3">
+    <a class="btn-primary" href="app.html">Start for Free →</a>
+    <a class="btn-ghost" href="#features">See Features</a>
+  </div>
+  <p class="hero-note fade-up delay-4"><span>✓ Free forever</span> &nbsp;·&nbsp; No bank login required &nbsp;·&nbsp; Works on any device</p>
+
+  <!-- APP PREVIEW MOCKUP -->
+  <div class="preview-wrap fade-up delay-4">
+    <div class="preview-frame">
+      <div class="preview-bar">
+        <div class="preview-dot" style="background:#ef4444"></div>
+        <div class="preview-dot" style="background:#f59e0b"></div>
+        <div class="preview-dot" style="background:#10b981"></div>
+        <span style="margin-left:8px;font-size:0.65rem;color:var(--muted)">fyndrwealth.com</span>
+      </div>
+      <div class="preview-screen">
+        <div class="mock-header">
+          <div class="mock-logo">💎 FyndrWealth</div>
+          <div style="font-size:0.6rem;color:var(--green);font-weight:700">✓ Saved</div>
+        </div>
+        <div class="mock-score-ring">
+          <div class="mock-score-num">84</div>
+          <div class="mock-score-label">Financial Health Score</div>
+          <div style="font-size:0.62rem;color:var(--green);margin-top:4px">Good 👍 — Focus on growing investments</div>
+        </div>
+        <div class="mock-cards">
+          <div class="mock-card">
+            <div class="mock-card-label">Income</div>
+            <div class="mock-card-val" style="color:var(--green)">$4,200</div>
+          </div>
+          <div class="mock-card">
+            <div class="mock-card-label">Expenses</div>
+            <div class="mock-card-val" style="color:#f59e0b">$2,840</div>
+          </div>
+          <div class="mock-card">
+            <div class="mock-card-label">Saved</div>
+            <div class="mock-card-val" style="color:var(--accent2)">$1,360</div>
+          </div>
+        </div>
+        <div class="mock-bar-row">
+          <div class="mock-bar-label"><span>🏠 Rent</span><span>$1,200 · 43%</span></div>
+          <div class="mock-bar"><div class="mock-bar-fill" style="width:43%;background:linear-gradient(90deg,var(--green),#059669)"></div></div>
+        </div>
+        <div class="mock-bar-row">
+          <div class="mock-bar-label"><span>🍔 Food</span><span>$480 · 17%</span></div>
+          <div class="mock-bar"><div class="mock-bar-fill" style="width:17%;background:linear-gradient(90deg,#f59e0b,#d97706)"></div></div>
+        </div>
+        <div class="mock-bar-row">
+          <div class="mock-bar-label"><span>📱 Subscriptions ✂️</span><span>$180 · 6%</span></div>
+          <div class="mock-bar"><div class="mock-bar-fill" style="width:6%;background:linear-gradient(90deg,#ef4444,#dc2626)"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-val">100%</div><div class="stat-label">Free Forever</div></div>
+  <div class="stat"><div class="stat-val">0</div><div class="stat-label">Bank Logins Required</div></div>
+  <div class="stat"><div class="stat-val">15+</div><div class="stat-label">Financial Tools</div></div>
+  <div class="stat"><div class="stat-val">AI</div><div class="stat-label">Powered Advisor</div></div>
+</div>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="section-badge">Features</div>
+  <h2 class="section-title">Everything you need.<br/>Nothing you don't.</h2>
+  <p class="section-sub">Most finance apps lock the good stuff behind a paywall. We don't. Every feature is free.</p>
+  <div class="features-grid">
+    <div class="feat-card">
+      <div class="feat-icon">🏠</div>
+      <div class="feat-title">Financial Health Score</div>
+      <div class="feat-desc">A real-time 0–100 score that shows exactly where you stand and what to improve — updated instantly as you add data.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">💸</div>
+      <div class="feat-title">Budget & Expense Tracker</div>
+      <div class="feat-desc">Set your income, add expenses, and see your 50/30/20 split with live bar charts. Flags what you should cut.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">💳</div>
+      <div class="feat-title">Debt Crusher</div>
+      <div class="feat-desc">Avalanche or snowball method. A payment slider shows exactly how much interest you save and how many months faster you get free.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🤖</div>
+      <div class="feat-title">AI Financial Advisor</div>
+      <div class="feat-desc">Powered by Claude AI. Reads your actual numbers and gives you specific, personalized advice — not generic tips.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🎯</div>
+      <div class="feat-title">Savings Goals</div>
+      <div class="feat-desc">Set a target, add monthly contributions, and get an exact date when you'll hit it. Emergency fund, car, vacation — anything.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🗓️</div>
+      <div class="feat-title">Spending Heatmap</div>
+      <div class="feat-desc">A color-coded calendar showing your spending intensity day by day. Instantly see your worst spending days of the month.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">📅</div>
+      <div class="feat-title">Bill Reminders</div>
+      <div class="feat-desc">Add recurring bills and get color-coded alerts before each due date. A monthly checklist so nothing slips through.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">📊</div>
+      <div class="feat-title">Net Worth Tracker</div>
+      <div class="feat-desc">Add assets and liabilities to see your real net worth. Watching it grow monthly is one of the most motivating things in finance.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🔥</div>
+      <div class="feat-title">Streaks & Milestones</div>
+      <div class="feat-desc">Daily logging streaks, no-spend day tracker, and milestone badges keep you accountable and consistent.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how-it-works" style="background:var(--surface);max-width:100%;padding:80px 24px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-badge">How It Works</div>
+    <h2 class="section-title">Up and running in 2 minutes.</h2>
+    <p class="section-sub">No setup. No bank connection. No credit card.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Open the app — no download needed</div>
+          <div class="step-desc">FyndrWealth runs entirely in your browser on any device. Visit fyndrwealth.com and start immediately. Nothing to install.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Enter your income and expenses</div>
+          <div class="step-desc">Type in your monthly take-home pay and your recurring expenses. FyndrWealth instantly calculates your health score, budget split, and what you can cut.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Add your debts and goals</div>
+          <div class="step-desc">Enter any debts with their APR and minimum payment. The Debt Crusher shows you the fastest payoff path. Add savings goals and track your progress.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <div class="step-title">Create a free account to save everything</div>
+          <div class="step-desc">Sign up with email or Google to save your data to the cloud. Access it from any device, anytime. Your financial picture is always with you.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="background:var(--surface);max-width:100%;padding:80px 24px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-badge">Feedback</div>
+    <h2 class="section-title">What people are saying.</h2>
+    <p class="section-sub" style="margin-bottom:40px;">Real feedback from real users.</p>
+    <div class="testimonials">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"Finally a budgeting app that doesn't need my bank password. The debt crusher alone is worth it — showed me I could be debt free 14 months faster."</div>
+        <div class="testi-author"><div class="testi-avatar">👤</div><div><div class="testi-name">Marcus T.</div><div class="testi-handle">Paid off $8,400 in credit card debt</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"I've tried every budgeting app. This is the first one that actually feels like it's on my side. The AI advisor gave me a plan for my car goal with exact monthly numbers."</div>
+        <div class="testi-author"><div class="testi-avatar">👤</div><div><div class="testi-name">Jasmine R.</div><div class="testi-handle">Saving for a $12,000 car</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"The spending heatmap is genius. I could see immediately that every Friday I blow my budget. Changed one habit and saved $280 last month."</div>
+        <div class="testi-author"><div class="testi-avatar">👤</div><div><div class="testi-name">Devon K.</div><div class="testi-handle">Saved $280 in first month</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--surface);max-width:100%;padding:80px 24px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-badge">FAQ</div>
+    <h2 class="section-title">Common questions.</h2>
+    <p class="section-sub" style="margin-bottom:40px;">Straight answers, no fluff.</p>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is FyndrWealth really free?</div>
+        <div class="faq-a">Yes — completely free, forever. No credit card required, no hidden fees, no trial period that converts to a subscription. The free plan includes every core feature. Pro and Family plans are coming soon for users who want advanced features.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do you need my bank login or account number?</div>
+        <div class="faq-a">No. FyndrWealth never connects to your bank. You enter your numbers manually, which many people prefer — it keeps your banking credentials completely private and gives you full control over what data is tracked.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Where is my data stored?</div>
+        <div class="faq-a">If you create a free account, your data is stored securely on Supabase — a trusted cloud database used by thousands of applications. Guest mode data is stored only in your browser and disappears when you close the tab.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How does the AI advisor work?</div>
+        <div class="faq-a">The AI advisor is powered by Claude (by Anthropic). Every time you ask a question, it reads your actual financial data — income, expenses, debts, goals — and gives you personalized advice based on your real numbers. Not generic tips.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Does it work on mobile?</div>
+        <div class="faq-a">Yes. FyndrWealth is mobile-first and works on any browser on any device. You can also add it to your iPhone or Android home screen for an app-like experience. A native iOS and Android app is in development.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can I use it without creating an account?</div>
+        <div class="faq-a">Yes — guest mode lets you use every feature immediately with no signup. The only difference is your data won't be saved if you close the browser. Creating a free account takes 30 seconds and saves everything to the cloud.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BOTTOM -->
+<section class="cta-bottom">
+  <h2>Start finding your<br/><span style="background:linear-gradient(135deg,#2563eb,#0ea5e9,#10b981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">financial freedom today.</span></h2>
+  <p>Free forever. No credit card. No bank login. Just clarity.</p>
+  <a class="btn-primary" href="app.html" style="font-size:1rem;padding:16px 36px;">Open FyndrWealth Free →</a>
+  <p style="margin-top:16px;font-size:0.72rem;color:var(--muted);">Join thousands of people taking control of their money 💎</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="#">
+    <img src="data:image/png;base64,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" style="height:22px;width:22px;object-fit:contain;border-radius:4px" alt=""/>
+    <span>FyndrWealth</span>
+  </a>
+  <div class="footer-links">
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+    <a href="app.html">Launch App</a>
+    <a href="mailto:support@fyndrwealth.com">Support</a>
+  </div>
+  <div class="footer-copy">© 2025 FyndrWealth. All rights reserved.</div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleFaq(el){
+  const item=el.parentElement;
+  item.classList.toggle('open');
+}
+
+// Scroll reveal
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.style.opacity='1';
+      e.target.style.transform='translateY(0)';
+    }
+  });
+},{threshold:0.1});
+
+document.querySelectorAll('.feat-card,.testi-card,.price-card,.step').forEach(el=>{
+  el.style.opacity='0';
+  el
